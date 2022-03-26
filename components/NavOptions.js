@@ -10,15 +10,17 @@ import { selectOrigin } from '../slices/navSlice';
 const data = [
     {
         id: "123",
-        title: "Solid Waste",
-        image: "https://i.ibb.co/7JcXgmd/2718784.png",
+        title: "Taxi-Cab",
+        image: "https://uxwing.com/wp-content/themes/uxwing/download/14-transportation-automotive/taxi-cab.png",
+        // image: "https://i.ibb.co/7JcXgmd/2718784.png",
         screen: "MapScreen",
     },
     {
         id: "456",
-        title: "Liquid Waste",
-        image: "https://i.ibb.co/B2g6Rym/Png-Item-1649314.png",
-        screen: "EatsScreen",
+        title: "Motorcycle",
+        image:"https://uxwing.com/wp-content/themes/uxwing/download/14-transportation-automotive/bike-motorcycle.png",
+        // image: "https://i.ibb.co/B2g6Rym/Png-Item-1649314.png",
+        screen: "Motorcycle",
     }
 ];
 
@@ -34,7 +36,7 @@ const NavOptions = () => {
         renderItem={({ item }) => (
             <TouchableOpacity
             onPress= {() => navigation.navigate(item.screen)}
-            style={tw(`p-2 pl-5 pb-8 pt-4 bg-gray-200 m-2`)}
+            style={tw(`p-2 pl-5 pb-8 pt-4 bg-gray-100 m-2`)}
             disabled={!origin}
             >
                 <View style={tw(`${!origin && "opacity-20"}`)}>

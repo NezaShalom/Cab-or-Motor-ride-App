@@ -7,6 +7,9 @@ import { GOOGLE_MAPS_APIKEY } from "@env"
 import { setDestination } from '../slices/navSlice'
 import { useDispatch } from 'react-redux'
 import { useNavigation } from '@react-navigation/core'
+import NavFavourites from './NavFavourites'
+import { Icon } from 'react-native-elements'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 
 const NavigateCard = () => {
@@ -14,8 +17,8 @@ const NavigateCard = () => {
     const navigation = useNavigation();
 
   return (
-    <View style={SafeViewAndroid.AndroidSafeArea}>
-        <Text style={tw(`text-center py-2 text-xl`)}>Welcome, Shalom</Text>
+    <View style={tw(`bg-white flex-1`)}>
+        <Text style={tw(`text-center py-3 text-xl`)}>Welcome, Shalom</Text>
         <View style={tw(`border-t border-gray-50 flex-shrink`)}>
             <View>
                 <GooglePlacesAutocomplete
@@ -41,10 +44,28 @@ const NavigateCard = () => {
                     debounce={400}
                 />
             </View>
+
+            <NavFavourites />
+        </View>
+
+        <View
+            style={tw(`flex-row bg-white justify-evenly py-2 mt-0 border-t border-gray-100`)}
+        >
+            <TouchableOpacity 
+            onPress= {() => navigation.navigate('RideOptionCard')}
+            style={tw(`flex flex-row justify-between bg-black w-24 px-4 py-3 rounded-full`)}>
+                <Icon name="car" type="font-awesome" color="white" size={16} />
+                <Text style={tw(`text-white text-center`)}> Taxi</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={tw(`flex flex-row justify-between w-24 px-4 py-3 rounded-full`)}>
+                <Icon name="motorcycle" type="font-awesome" color="black" size={16} />
+                <Text style={tw(`text-center`)}>Motor</Text>
+            </TouchableOpacity>
         </View>
     </View>
-  )
-}
+  );
+};
 
 export default NavigateCard
 
