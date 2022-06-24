@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^1.6.2",
     "expo": "~43.0.2",
     "expo-status-bar": "~1.1.0",
+    "expo-updates": "~0.10.15",
     "hammerjs": "^2.0.8",
     "intl": "^1.2.5",
     "react": "17.0.1",

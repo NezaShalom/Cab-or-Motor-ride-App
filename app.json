@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sell",
-    "slug": "sell",
+    "name": "TegaWithUs",
+    "slug": "is an all-cross app that connect passengers to hail a ride with an estimated time to the arrival of their destiny, with google distance metrics and calculation of prices",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
